@@ -1,119 +1,98 @@
-header div {
-    background-color: #7A82AB;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* first section */
-  article section:first-child {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  article section:first-child div {
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #307473;
-    border: 1px solid black;
-    box-sizing: border-box;
-  }
-  
-  article section:first-child div:first-child {
-    background-color: #12664F;
-  }
-  
-  /* second section */
-  article section:nth-child(2) {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-  }
-  
-  article section:nth-child(2) div {
-    min-height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2DC2BD;
-    border: 1px solid black;
-    box-sizing: border-box;
-  }
-  
-  article section:nth-child(2) div:nth-child(2) {
-    background-color: #FF36AB;
-  }
-  
-  article section:nth-child(2) div:nth-child(3) {
-    background-color: #44FFD2;
-  }
-  
-  article section:nth-child(2) div:nth-child(4) {
-    background-color: #FFBFA0;
-  }
-  /* third section */
-  article section:last-child div {
-    min-height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ccc;
-    border: 1px solid black;
-    box-sizing: border-box;
-  }
-  
-  @media (max-width: 767px) {
-    header div {
-      min-width: 480px;
-      height: 75px;
-      background-color: #635380;
-    }
-    article section:first-child {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-    }
-  
-    article section:first-child div {
-      min-height: 125px;
-      background-color: #90708C;
-      border: 1px solid black;
-    }
-    article section:first-child div:first-child {
-      background-color: #ACE4AA;
-    }
-  
-    article section:nth-child(2) {
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: auto auto;
-    }
-  
-    article section:nth-child(2) div {
-      height: 250px;
-      background-color: #E1CDB5;
-    }
-  
-    article section:nth-child(2) div:nth-child(2) {
-      background-color: #6F9283;
-    }
+@media screen and (min-width: 768px){
+
     
-    article section:nth-child(2) div:nth-child(3) {
-      background-color: #8D9F87;
-    }
-    
-    article section:nth-child(2) div:nth-child(4) {
-      background-color: #CDC6A5;
-    }
+  main{
+      display: grid;
+      grid-template-rows: 100px 200px 250px 150px;
+      grid-template-columns: 200px 190px 190px 190px 190px;   
+   }
+   #a {
+       grid-row: 1/2;
+       grid-column: 1/6;
+   }
+   #b {
+       grid-row: 2/6;
+       grid-column: 1/2;
+   }
+   #c {
+       grid-row:2/3;
+       grid-column: 2/4;
+   }
+   #d {
+       grid-row: 2/3;
+       grid-column: 4/6;
+   }
+   #e {
+       grid-row: 3/4;
+       grid-column: 2/3; 
+
+   }
+   #f {
+      grid-row: 3/4;
+      grid-column: 3/4; 
+   }
+   
+   #g {
+      grid-row: 3/4;
+      grid-column: 4/5; 
+   }
+   #h {
+      grid-row: 3/4;
+      grid-column: 5/6; 
+   }
+   #i {
+      grid-row: 4/5;
+      grid-column: 2/6; 
+   }
+
   
-    article section:last-child div {
-      min-height: 80px;
-      background-color: #5B85AA;
-    }
+} 
+
+@media screen and (min-width: 768px) and (max-width:955px) {
+
+  main{
+      display: grid;
+      
+     
+   }
+
+   #a {
+      grid-row: 1/4 ;
+      grid-column: 1/2;
+      background-color: orangered;
+  }
+
+  #c {
+      grid-row: 1/4;
+      grid-column: 2/4;
+      background-color: palevioletred;
+  }
+  #d {
+      grid-row:1/4;
+      grid-column:4/6;
+      background-color: plum;
+  }
+
+  #e{
+      background-color: rgb(219, 255, 145);
+      grid-row:3/5;
+     
   }
   
+  #f{
+      background-color: saddlebrown;
+      
+  }
+  
+ #i{
+     background-color: silver;
+     grid-row:4/5;
+     grid-column:3/5;
+ }
+
+ #h {
+     background-color: springgreen;
+     grid-row:3/5;
+ }
+
+}
